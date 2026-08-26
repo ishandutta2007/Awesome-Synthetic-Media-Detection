@@ -1,0 +1,210 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080b14"/>
+      <stop offset="50%" stop-color="#0d1527"/>
+      <stop offset="100%" stop-color="#050811"/>
+    </linearGradient>
+
+    <!-- Glowing Accent Gradients -->
+    <linearGradient id="cyanPurple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe"/>
+      <stop offset="50%" stop-color="#4facfe"/>
+      <stop offset="100%" stop-color="#7f00ff"/>
+    </linearGradient>
+
+    <linearGradient id="neonGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f5a0"/>
+      <stop offset="100%" stop-color="#00d9f5"/>
+    </linearGradient>
+
+    <linearGradient id="scanBeam" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#00f2fe" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#00f2fe" stop-opacity="0"/>
+    </linearGradient>
+
+    <radialGradient id="glowSpot1" cx="20%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#00f2fe" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="glowSpot2" cx="80%" cy="70%" r="50%">
+      <stop offset="0%" stop-color="#7f00ff" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#7f00ff" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0, 242, 254, 0.07)" stroke-width="1"/>
+    </pattern>
+
+    <!-- Cyber Shield Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="strongGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur1"/>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="20" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    @keyframes scanLine {
+      0% { transform: translateY(-50px); opacity: 0.2; }
+      50% { opacity: 0.9; }
+      100% { transform: translateY(370px); opacity: 0.2; }
+    }
+    @keyframes pulseShield {
+      0%, 100% { transform: scale(1); filter: drop-shadow(0 0 8px #00f2fe); }
+      50% { transform: scale(1.04); filter: drop-shadow(0 0 22px #00f5a0); }
+    }
+    @keyframes blinkDot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.2; transform: scale(0.7); }
+    }
+    @keyframes radarWave {
+      0% { r: 10; opacity: 0.9; stroke-width: 2.5; }
+      100% { r: 75; opacity: 0; stroke-width: 0.5; }
+    }
+    @keyframes waveBar {
+      0%, 100% { height: 12px; y: 24px; }
+      50% { height: 38px; y: 11px; }
+    }
+    @keyframes waveBar2 {
+      0%, 100% { height: 34px; y: 13px; }
+      50% { height: 16px; y: 22px; }
+    }
+
+    .scanner { animation: scanLine 4s ease-in-out infinite; }
+    .shield-icon { transform-origin: 155px 180px; animation: pulseShield 3.5s ease-in-out infinite; }
+    .blinker { transform-origin: center; animation: blinkDot 1.8s infinite; }
+    .wave1 { animation: radarWave 3s cubic-bezier(0.2, 0.8, 0.4, 1) infinite; }
+    .wave2 { animation: radarWave 3s cubic-bezier(0.2, 0.8, 0.4, 1) infinite; animation-delay: 1.5s; }
+    .bar1 { animation: waveBar 1.2s ease-in-out infinite; }
+    .bar2 { animation: waveBar2 1.4s ease-in-out infinite; }
+    .bar3 { animation: waveBar 1.6s ease-in-out infinite; animation-delay: 0.3s; }
+    .bar4 { animation: waveBar2 1.1s ease-in-out infinite; animation-delay: 0.5s; }
+    .bar5 { animation: waveBar 1.5s ease-in-out infinite; animation-delay: 0.2s; }
+  </style>
+
+  <!-- Background Base -->
+  <rect width="1200" height="360" rx="18" fill="url(#bgGradient)"/>
+  <rect width="1200" height="360" rx="18" fill="url(#glowSpot1)"/>
+  <rect width="1200" height="360" rx="18" fill="url(#glowSpot2)"/>
+  <rect width="1200" height="360" rx="18" fill="url(#grid)"/>
+
+  <!-- Border Highlight -->
+  <rect x="2" y="2" width="1196" height="356" rx="16" fill="none" stroke="url(#cyanPurple)" stroke-width="1.8" stroke-opacity="0.75"/>
+
+  <!-- Dynamic Scanner Line -->
+  <g class="scanner">
+    <rect x="10" y="0" width="1180" height="6" fill="url(#scanBeam)"/>
+    <line x1="20" y1="3" x2="1180" y2="3" stroke="#00f2fe" stroke-width="2" stroke-opacity="0.85" filter="url(#glow)"/>
+  </g>
+
+  <!-- Left Side: Interactive Shield & Radar Forensic Sensor -->
+  <g class="shield-icon">
+    <!-- Radar Waves -->
+    <circle cx="155" cy="180" r="10" fill="none" stroke="#00f2fe" class="wave1"/>
+    <circle cx="155" cy="180" r="10" fill="none" stroke="#00f5a0" class="wave2"/>
+
+    <!-- Outer Hex Shield -->
+    <polygon points="155,105 215,138 215,222 155,255 95,222 95,138" fill="rgba(13, 21, 39, 0.85)" stroke="url(#cyanPurple)" stroke-width="3" filter="url(#glow)"/>
+    <!-- Inner Shield Target -->
+    <polygon points="155,125 195,148 195,212 155,235 115,212 115,148" fill="rgba(0, 242, 254, 0.08)" stroke="#00f2fe" stroke-width="1.5" stroke-dasharray="4,3"/>
+    
+    <!-- Forensic Crosshair -->
+    <line x1="155" y1="120" x2="155" y2="240" stroke="rgba(0,242,254,0.3)" stroke-width="1"/>
+    <line x1="105" y1="180" x2="205" y2="180" stroke="rgba(0,242,254,0.3)" stroke-width="1"/>
+
+    <!-- Verification Checkmark / Provenance Emblem -->
+    <path d="M138 180 L150 193 L174 165" fill="none" stroke="#00f5a0" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+    <circle cx="155" cy="180" r="3" fill="#00f5a0"/>
+  </g>
+
+  <!-- Center-Right Main Content -->
+  <!-- Top Category Tag -->
+  <g transform="translate(260, 68)">
+    <rect x="0" y="0" width="280" height="28" rx="14" fill="rgba(0, 242, 254, 0.12)" stroke="#00f2fe" stroke-width="1.2"/>
+    <circle cx="16" cy="14" r="5" fill="#00f5a0" class="blinker"/>
+    <text x="32" y="19" font-family="'Segoe UI', Roboto, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#00f2fe" letter-spacing="1.5">AI FORENSICS &amp; TRUST SIGNALS</text>
+  </g>
+
+  <g transform="translate(555, 68)">
+    <rect x="0" y="0" width="170" height="28" rx="14" fill="rgba(127, 0, 255, 0.15)" stroke="#7f00ff" stroke-width="1.2"/>
+    <text x="14" y="19" font-family="'Segoe UI', Roboto, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#c084fc" letter-spacing="1.2">🛡️ C2PA STANDARD</text>
+  </g>
+
+  <!-- Main Title -->
+  <text x="260" y="148" font-family="'Segoe UI', Roboto, -apple-system, sans-serif" font-size="44" font-weight="900" fill="#ffffff" letter-spacing="1.2">
+    AWESOME <tspan fill="url(#cyanPurple)" filter="url(#glow)">SYNTHETIC MEDIA</tspan>
+  </text>
+  <text x="260" y="198" font-family="'Segoe UI', Roboto, -apple-system, sans-serif" font-size="38" font-weight="800" fill="#e2e8f0" letter-spacing="2">
+    DETECTION &amp; PROVENANCE
+  </text>
+
+  <!-- Subtitle -->
+  <text x="260" y="240" font-family="'Segoe UI', Roboto, sans-serif" font-size="16.5" font-weight="500" fill="#94a3b8" letter-spacing="0.8">
+    Curated Hub of SaaS Platforms, Open Models, Deepfake Detectors &amp; C2PA Toolkits
+  </text>
+
+  <!-- Live Audio/Video Spectrum Forensic Visualizer -->
+  <g transform="translate(260, 268)">
+    <rect x="0" y="0" width="220" height="54" rx="8" fill="rgba(15, 23, 42, 0.75)" stroke="rgba(0,242,254,0.3)" stroke-width="1"/>
+    <text x="12" y="18" font-family="monospace" font-size="10" fill="#38bdf8" font-weight="700">FORENSIC AUDIO SPECTRUM</text>
+    
+    <rect x="15" width="5" rx="2" fill="#00f5a0" class="bar1"/>
+    <rect x="25" width="5" rx="2" fill="#00f2fe" class="bar2"/>
+    <rect x="35" width="5" rx="2" fill="#38bdf8" class="bar3"/>
+    <rect x="45" width="5" rx="2" fill="#818cf8" class="bar4"/>
+    <rect x="55" width="5" rx="2" fill="#c084fc" class="bar5"/>
+    <rect x="65" width="5" rx="2" fill="#00f5a0" class="bar2"/>
+    <rect x="75" width="5" rx="2" fill="#00f2fe" class="bar1"/>
+    <rect x="85" width="5" rx="2" fill="#38bdf8" class="bar4"/>
+    <rect x="95" width="5" rx="2" fill="#818cf8" class="bar3"/>
+    <rect x="105" width="5" rx="2" fill="#c084fc" class="bar5"/>
+    <rect x="115" width="5" rx="2" fill="#00f5a0" class="bar1"/>
+    <rect x="125" width="5" rx="2" fill="#00f2fe" class="bar3"/>
+    <rect x="135" width="5" rx="2" fill="#38bdf8" class="bar2"/>
+    <rect x="145" width="5" rx="2" fill="#818cf8" class="bar5"/>
+    <rect x="155" width="5" rx="2" fill="#c084fc" class="bar1"/>
+    <rect x="165" width="5" rx="2" fill="#00f5a0" class="bar4"/>
+    <rect x="175" width="5" rx="2" fill="#00f2fe" class="bar2"/>
+    <rect x="185" width="5" rx="2" fill="#38bdf8" class="bar3"/>
+    <rect x="195" width="5" rx="2" fill="#00f5a0" class="bar1"/>
+  </g>
+
+  <!-- Status Pills Bottom Right -->
+  <g transform="translate(500, 268)">
+    <rect x="0" y="0" width="190" height="54" rx="8" fill="rgba(15, 23, 42, 0.75)" stroke="rgba(0,242,254,0.3)" stroke-width="1"/>
+    <circle cx="20" cy="27" r="4" fill="#00f5a0" class="blinker"/>
+    <text x="34" y="24" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="700" fill="#f8fafc">MULTIMODAL SCANS</text>
+    <text x="34" y="42" font-family="'Segoe UI', sans-serif" font-size="10" fill="#94a3b8">Video • Audio • Image • Text</text>
+  </g>
+
+  <g transform="translate(705, 268)">
+    <rect x="0" y="0" width="220" height="54" rx="8" fill="rgba(15, 23, 42, 0.75)" stroke="rgba(127,0,255,0.4)" stroke-width="1"/>
+    <circle cx="20" cy="27" r="4" fill="#c084fc" class="blinker"/>
+    <text x="34" y="24" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="700" fill="#f8fafc">PROVENANCE &amp; FORENSICS</text>
+    <text x="34" y="42" font-family="'Segoe UI', sans-serif" font-size="10" fill="#94a3b8">C2PA Manifests • Watermarking</text>
+  </g>
+
+  <!-- Right Decorative Geometric Hex Tech Node -->
+  <g transform="translate(1020, 140)">
+    <polygon points="60,0 120,35 120,105 60,140 0,105 0,35" fill="none" stroke="rgba(0, 242, 254, 0.25)" stroke-width="1.5"/>
+    <polygon points="60,15 105,42 105,98 60,125 15,98 15,42" fill="none" stroke="rgba(127, 0, 255, 0.4)" stroke-width="1.2" stroke-dasharray="5,4"/>
+    <circle cx="60" cy="70" r="18" fill="rgba(0, 242, 254, 0.15)" stroke="#00f2fe" stroke-width="2" filter="url(#glow)"/>
+    <text x="60" y="75" font-family="monospace" font-size="12" font-weight="bold" fill="#00f5a0" text-anchor="middle">AI</text>
+    <line x1="60" y1="0" x2="60" y2="-30" stroke="rgba(0,242,254,0.3)" stroke-width="1.5"/>
+    <line x1="120" y1="70" x2="145" y2="70" stroke="rgba(0,242,254,0.3)" stroke-width="1.5"/>
+  </g>
+</svg>
