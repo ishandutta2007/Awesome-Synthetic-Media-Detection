@@ -1,0 +1,2 @@
+# Awesome-Synthetic-Media-Detection
+
