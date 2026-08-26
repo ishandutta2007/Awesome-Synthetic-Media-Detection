@@ -28,7 +28,7 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 ## Table of Contents
 
-- [SaaS/Hosted Platforms](#saas-products)
+- [SaaS/Hosted Platforms](#saashosted-platforms)
 
 - [Open-Source GitHub Projects](#open-source-github-projects)
 
@@ -40,63 +40,18 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 ## SaaS/Hosted Platforms
 
-- **[Hive](https://thehive.ai/)**  
-
-  Content moderation and AI-generated content detection APIs covering images, video, and audio, frequently used at scale for platform trust-and-safety workflows.
-
-
-
-- **[Sensity AI](https://sensity.ai/)**  
-
-  Visual deepfake and synthetic media detection platform with forensic analysis and threat-intelligence capabilities focused on manipulated faces and video.
-
-
-
-- **[Reality Defender](https://www.realitydefender.com/)**  
-
-  Multimodal deepfake detection platform (image, video, audio, text) delivered via API, targeting enterprise, financial, and media use cases.
-
-
-
-- **[GetReal Security](https://www.getrealsecurity.com/)**  
-
-  Media authenticity and deepfake detection solutions oriented toward enterprise and security-conscious organizations.
-
-
-
-- **[Truepic](https://truepic.com/)**  
-
-  Content authenticity platform combining capture-time verification, provenance, and detection capabilities for trusted media.
-
-
-
-- **[DeepMedia](https://www.deepmedia.ai/)**  
-
-  Synthetic media detection and analysis tools focused on identifying AI-generated or manipulated audiovisual content.
-
-
-
-- **[Attestiv](https://attestiv.com/)**  
-
-  Digital media authenticity and verification platform supporting provenance and integrity checks for images and documents.
-
-
-
-- **[C2PA Verify / Content Authenticity tools](https://c2pa.org/)**  
-
-  Verification services and tooling aligned with the Coalition for Content Provenance and Authenticity (C2PA) standard for inspecting content credentials.
-
-
-
-- **[Optic](https://www.optic.com/)**  
-
-  Solutions related to media verification and synthetic content detection in the broader authenticity ecosystem.
-
-
-
-- **[Adobe Content Credentials](https://www.adobe.com/)**  
-
-  Adobe’s implementation of content credentials and provenance features (part of the Content Authenticity Initiative) for creators and consumers of media.
+| Platform | Description | Pricing | Free Tier / Trial Limits |
+| :--- | :--- | :--- | :--- |
+| **[Hive](https://thehive.ai/)** | Content moderation and AI-generated media detection APIs across image, video, and audio. | Starting at **$6.00 / 1,000 image requests**, $6.00 / 1,000 video frames, $10.00 / audio hour | **$50 free API credits** on sign-up; default rate limit of 100 requests/day during evaluation + free web demo |
+| **[Sensity AI](https://sensity.ai/)** | Visual deepfake and synthetic media detection platform with forensic analysis and threat intelligence. | Starting at **$29.00 / month** (entry-level plan); custom enterprise plans based on scan volume | **7-day free trial** upon sales request for KYC & detection testing; free web demonstration tool |
+| **[Reality Defender](https://www.realitydefender.com/)** | Multimodal deepfake detection platform (image, video, audio, text) via API and web app. | Business Plan starting at **$399.00 / month** ($4,788/yr billed annually for 1,000 scans/month) | **Free forever Developer API** with **50 scans/month** (no credit card required) |
+| **[GetReal Security](https://www.getrealsecurity.com/)** | Deepfake detection and media authenticity platform protecting enterprise workflows and identity verification. | Starter kits starting at **$500.00 / month** (use-case pilots); custom quotes for enterprise rollouts | **14-day proof-of-concept / pilot trial** available upon request with guided onboarding demo |
+| **[Truepic](https://truepic.com/)** | Content authenticity and C2PA-compliant provenance verification platform (Truepic Vision / Lens). | Starting at **$15.00 – $65.00 per inspection** (tiered volume commitment; custom for >10,000/yr) | **14-day free trial** / guided test inspection demo upon request (no permanent free business tier) |
+| **[DeepMedia](https://www.deepmedia.ai/)** | Synthetic media and deepfake detection engine (audio, video, face swap, voice clone) for enterprise & defense. | Starting at **$0.01 per detection request** (enterprise pilot packages start at $1,000.00/month) | **14-day pilot evaluation** with sample detection credits upon sales demo request |
+| **[Attestiv](https://attestiv.com/)** | Digital media authenticity, tampering analysis, and forensic verification platform for images and video. | Starting at **$49.00 / month** for base commercial API licenses | **Free forever plan** with **5 video scans/month**; **30-day full API trial**; unlimited free tier for journalists |
+| **[C2PA Verify](https://c2pa.org/)** | Official open-standard provenance inspector for validating and viewing C2PA Content Credentials. | **$0.00 (100% Free)** open-standard public utility | **Unlimited free in-browser and API manifest verification** (no usage cap, no registration required) |
+| **[Optic (AI or Not)](https://aiornot.com/)** | AI-generated media and deepfake detector for images, audio, and synthetic content analysis. | Starting at **$5.00 / month** (includes $10 monthly API credits, pay-as-you-go thereafter) | **Free forever tier** with **10–20 image checks/month** + **$5 free API credits** on sign-up |
+| **[Adobe Content Credentials](https://contentauthenticity.org/)** | Adobe's provenance ecosystem tools to inspect, verify, and attach tamper-evident metadata to digital media. | **$0.00 (100% Free)** for Content Authenticity web app (Creative Cloud plans start at $9.99/month) | **Unlimited free access** via Adobe Content Authenticity app & browser inspect tools (requires free Adobe ID) |
 
 
 
